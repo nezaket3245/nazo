@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ca1e0"/>
+      <stop offset="35%" stop-color="#7ec8e3"/>
+      <stop offset="60%" stop-color="#b5dff5"/>
+      <stop offset="100%" stop-color="#dceefb"/>
+    </linearGradient>
+    <!-- Sun glow -->
+    <radialGradient id="sunGlow" cx="0.75" cy="0.18" r="0.35">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffe88a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7ec8e3" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Mountain gradient -->
+    <linearGradient id="mountain1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a6e"/>
+      <stop offset="100%" stop-color="#3d5c50"/>
+    </linearGradient>
+    <linearGradient id="mountain2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6b9080"/>
+      <stop offset="100%" stop-color="#4a7060"/>
+    </linearGradient>
+    <!-- Grass -->
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5daa4c"/>
+      <stop offset="50%" stop-color="#4a9a3a"/>
+      <stop offset="100%" stop-color="#3d8530"/>
+    </linearGradient>
+    <!-- Window frame -->
+    <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f0f0"/>
+      <stop offset="50%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#d5d5d5"/>
+    </linearGradient>
+    <!-- Water -->
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6db8d4"/>
+      <stop offset="100%" stop-color="#4a9cc0"/>
+    </linearGradient>
+    <!-- Screen mesh pattern -->
+    <pattern id="mesh" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="none"/>
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#555" stroke-width="0.18" opacity="0.22"/>
+      <line x1="2" y1="0" x2="2" y2="4" stroke="#555" stroke-width="0.18" opacity="0.22"/>
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#555" stroke-width="0.18" opacity="0.22"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#555" stroke-width="0.18" opacity="0.22"/>
+    </pattern>
+    <!-- Glass reflection -->
+    <linearGradient id="glassReflect" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.08"/>
+    </linearGradient>
+    <!-- Shadow -->
+    <filter id="softShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- === BACKGROUND: Sky === -->
+  <rect width="540" height="720" fill="url(#sky)"/>
+  <rect width="540" height="720" fill="url(#sunGlow)"/>
+
+  <!-- Wispy clouds -->
+  <ellipse cx="120" cy="100" rx="80" ry="22" fill="#fff" opacity="0.55"/>
+  <ellipse cx="150" cy="95" rx="60" ry="18" fill="#fff" opacity="0.45"/>
+  <ellipse cx="90" cy="105" rx="50" ry="15" fill="#fff" opacity="0.35"/>
+  
+  <ellipse cx="400" cy="150" rx="70" ry="18" fill="#fff" opacity="0.4"/>
+  <ellipse cx="430" cy="145" rx="50" ry="14" fill="#fff" opacity="0.3"/>
+
+  <ellipse cx="260" cy="70" rx="55" ry="12" fill="#fff" opacity="0.3"/>
+
+  <!-- Sun -->
+  <circle cx="405" cy="125" r="35" fill="#fff5cc" opacity="0.8"/>
+  <circle cx="405" cy="125" r="25" fill="#ffe566" opacity="0.6"/>
+
+  <!-- === Distant Mountains === -->
+  <path d="M0 380 L60 310 L130 350 L180 280 L240 330 L300 260 L350 310 L420 270 L480 320 L540 290 L540 420 L0 420Z" fill="url(#mountain1)" opacity="0.5"/>
+
+  <!-- Closer mountains -->
+  <path d="M0 420 L50 360 L110 390 L170 340 L230 380 L290 320 L360 370 L430 330 L500 370 L540 350 L540 460 L0 460Z" fill="url(#mountain2)" opacity="0.6"/>
+
+  <!-- Trees on mountains -->
+  <g opacity="0.5">
+    <polygon points="65,360 70,340 75,360" fill="#2d5a3d"/>
+    <polygon points="95,370 100,348 105,370" fill="#2d5a3d"/>
+    <polygon points="130,365 136,342 142,365" fill="#2d5a3d"/>
+    <polygon points="340,370 346,345 352,370" fill="#2d5a3d"/>
+    <polygon points="370,365 376,340 382,365" fill="#2d5a3d"/>
+    <polygon points="440,350 446,325 452,350" fill="#2d5a3d"/>
+    <polygon points="470,360 476,335 482,360" fill="#2d5a3d"/>
+  </g>
+
+  <!-- === Lake / Water === -->
+  <ellipse cx="270" cy="470" rx="200" ry="40" fill="url(#water)" opacity="0.7"/>
+  <!-- Water reflections -->
+  <line x1="150" y1="465" x2="200" y2="465" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="270" y1="475" x2="340" y2="475" stroke="#fff" stroke-width="0.8" opacity="0.25"/>
+  <line x1="220" y1="480" x2="290" y2="480" stroke="#fff" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- === Green meadow === -->
+  <path d="M0 460 Q100 440 200 460 Q300 470 400 455 Q470 445 540 460 L540 720 L0 720Z" fill="url(#grass)"/>
+
+  <!-- Grass texture lines -->
+  <g stroke="#3d8530" stroke-width="0.8" opacity="0.3">
+    <line x1="50" y1="510" x2="55" y2="495"/>
+    <line x1="60" y1="515" x2="63" y2="500"/>
+    <line x1="100" y1="520" x2="104" y2="505"/>
+    <line x1="150" y1="500" x2="154" y2="485"/>
+    <line x1="200" y1="525" x2="203" y2="510"/>
+    <line x1="350" y1="510" x2="354" y2="495"/>
+    <line x1="400" y1="500" x2="403" y2="485"/>
+    <line x1="450" y1="515" x2="454" y2="500"/>
+  </g>
+
+  <!-- Small flowers -->
+  <g opacity="0.6">
+    <circle cx="80" cy="530" r="3" fill="#f5e642"/>
+    <circle cx="180" cy="510" r="2.5" fill="#e86060"/>
+    <circle cx="320" cy="520" r="3" fill="#f5e642"/>
+    <circle cx="420" cy="505" r="2.5" fill="#fff"/>
+    <circle cx="250" cy="540" r="2" fill="#e86060"/>
+    <circle cx="460" cy="530" r="2.5" fill="#f5e642"/>
+  </g>
+
+  <!-- Distant house on the hill -->
+  <g transform="translate(380, 405)" opacity="0.6">
+    <rect x="0" y="10" width="22" height="18" fill="#d4a574" rx="1"/>
+    <polygon points="-3,10 11,-2 25,10" fill="#8b4513"/>
+    <rect x="7" y="16" width="5" height="8" fill="#6b3a1e"/>
+    <rect x="15" y="14" width="4" height="4" fill="#87ceeb" opacity="0.7"/>
+  </g>
+
+  <!-- === PVC WINDOW FRAME (White, modern) === -->
+  <!-- Outer frame -->
+  <rect x="25" y="20" width="490" height="680" rx="3" fill="url(#frameGrad)" filter="url(#softShadow)"/>
+  <!-- Inner cutout (view area) - left panel -->
+  <rect x="38" y="33" width="228" height="654" rx="1" fill="none" stroke="#ccc" stroke-width="0.5"/>
+  <!-- Inner cutout (view area) - right panel -->
+  <rect x="274" y="33" width="228" height="654" rx="1" fill="none" stroke="#ccc" stroke-width="0.5"/>
+
+  <!-- Middle vertical bar -->
+  <rect x="262" y="20" width="16" height="680" fill="url(#frameGrad)"/>
+  <line x1="262" y1="20" x2="262" y2="700" stroke="#d0d0d0" stroke-width="0.5"/>
+  <line x1="278" y1="20" x2="278" y2="700" stroke="#d0d0d0" stroke-width="0.5"/>
+
+  <!-- Horizontal bar (window lock area) -->
+  <rect x="25" y="350" width="490" height="14" fill="url(#frameGrad)"/>
+  <line x1="25" y1="350" x2="515" y2="350" stroke="#d0d0d0" stroke-width="0.5"/>
+  <line x1="25" y1="364" x2="515" y2="364" stroke="#d0d0d0" stroke-width="0.5"/>
+
+  <!-- Window handles -->
+  <rect x="252" y="230" width="5" height="28" rx="2" fill="#bbb"/>
+  <rect x="283" y="230" width="5" height="28" rx="2" fill="#bbb"/>
+
+  <!-- === SINEKLIK MESH (right panel - screen rolled/placed) === -->
+  <rect x="274" y="33" width="228" height="317" fill="url(#mesh)" opacity="0.7"/>
+
+  <!-- Glass reflection on left panel -->
+  <rect x="38" y="33" width="228" height="317" fill="url(#glassReflect)"/>
+  <path d="M38 33 L120 33 L38 180Z" fill="#fff" opacity="0.06"/>
+
+  <!-- === Frame edge details === -->
+  <!-- Top frame -->
+  <rect x="25" y="20" width="490" height="13" rx="3" fill="url(#frameGrad)"/>
+  <line x1="25" y1="33" x2="515" y2="33" stroke="#d0d0d0" stroke-width="0.5"/>
+  <!-- Bottom frame -->
+  <rect x="25" y="687" width="490" height="13" rx="3" fill="url(#frameGrad)"/>
+  <line x1="25" y1="687" x2="515" y2="687" stroke="#d0d0d0" stroke-width="0.5"/>
+  <!-- Left frame -->
+  <rect x="25" y="20" width="13" height="680" rx="3" fill="url(#frameGrad)"/>
+  <line x1="38" y1="20" x2="38" y2="700" stroke="#d0d0d0" stroke-width="0.5"/>
+  <!-- Right frame -->
+  <rect x="502" y="20" width="13" height="680" rx="3" fill="url(#frameGrad)"/>
+  <line x1="502" y1="20" x2="502" y2="700" stroke="#d0d0d0" stroke-width="0.5"/>
+
+  <!-- Small "Egepen" label on frame bottom -->
+  <text x="270" y="698" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#aaa" letter-spacing="1.5">EGEPEN DECEUNINCK</text>
+
+  <!-- Subtle frame shadow inside -->
+  <rect x="38" y="33" width="228" height="5" fill="url(#sky)" opacity="0.0"/>
+  
+  <!-- Birds in sky -->
+  <g stroke="#555" stroke-width="1.2" fill="none" opacity="0.35">
+    <path d="M200 85 Q205 78 210 85 Q215 78 220 85"/>
+    <path d="M330 100 Q334 94 338 100 Q342 94 346 100"/>
+    <path d="M160 120 Q163 115 166 120 Q169 115 172 120"/>
+  </g>
+
+  <!-- Butterfly near meadow -->
+  <g transform="translate(130, 490)" opacity="0.5">
+    <ellipse cx="-4" cy="0" rx="5" ry="3" fill="#e88040" transform="rotate(-20)"/>
+    <ellipse cx="4" cy="0" rx="5" ry="3" fill="#e88040" transform="rotate(20)"/>
+    <line x1="0" y1="0" x2="0" y2="-4" stroke="#555" stroke-width="0.5"/>
+  </g>
+
+</svg>

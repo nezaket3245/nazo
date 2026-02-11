@@ -1,0 +1,16 @@
+# robots.txt - egepenakcayapi.com
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/plugins/
+Disallow: /wp-json/
+Disallow: /xmlrpc*.php
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /*?*
+Disallow: /iletisim-egepenakcayapi-kimdir/
+
+# Sitemap
+Sitemap: https://egepenakcayapi.com/sitemap.xml

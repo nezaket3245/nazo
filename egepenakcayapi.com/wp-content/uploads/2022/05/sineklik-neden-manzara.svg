@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720">
+  <defs>
+    <!-- Sunset sky gradient -->
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b6cb0"/>
+      <stop offset="25%" stop-color="#4a90c4"/>
+      <stop offset="50%" stop-color="#87b8d8"/>
+      <stop offset="70%" stop-color="#c4dce8"/>
+      <stop offset="85%" stop-color="#e8d8c0"/>
+      <stop offset="100%" stop-color="#f0e0c8"/>
+    </linearGradient>
+    <!-- Sea/Bosphorus water -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a8cb8"/>
+      <stop offset="40%" stop-color="#3d7da8"/>
+      <stop offset="100%" stop-color="#2d6890"/>
+    </linearGradient>
+    <!-- City buildings gradient -->
+    <linearGradient id="bldg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a9aaa"/>
+      <stop offset="100%" stop-color="#6b7b8b"/>
+    </linearGradient>
+    <linearGradient id="bldg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a8a9a"/>
+      <stop offset="100%" stop-color="#5b6b7b"/>
+    </linearGradient>
+    <!-- Window frame PVC -->
+    <linearGradient id="pvcFrame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="50%" stop-color="#e8e8e8"/>
+      <stop offset="100%" stop-color="#ddd"/>
+    </linearGradient>
+    <!-- Mesh pattern for sineklik -->
+    <pattern id="meshPattern" patternUnits="userSpaceOnUse" width="3.5" height="3.5">
+      <rect width="3.5" height="3.5" fill="none"/>
+      <line x1="0" y1="0" x2="0" y2="3.5" stroke="#444" stroke-width="0.15" opacity="0.2"/>
+      <line x1="1.75" y1="0" x2="1.75" y2="3.5" stroke="#444" stroke-width="0.15" opacity="0.2"/>
+      <line x1="0" y1="0" x2="3.5" y2="0" stroke="#444" stroke-width="0.15" opacity="0.2"/>
+      <line x1="0" y1="1.75" x2="3.5" y2="1.75" stroke="#444" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+    <!-- Glass reflection -->
+    <linearGradient id="glassRef2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.01"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.06"/>
+    </linearGradient>
+    <!-- Balcony railing -->
+    <linearGradient id="railGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#555"/>
+      <stop offset="100%" stop-color="#333"/>
+    </linearGradient>
+    <!-- Warm light from sunset -->
+    <radialGradient id="warmLight" cx="0.7" cy="0.35" r="0.5">
+      <stop offset="0%" stop-color="#ffeedd" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffeedd" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow2" x="-3%" y="-3%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- === SKY === -->
+  <rect width="540" height="720" fill="url(#sky2)"/>
+  <rect width="540" height="720" fill="url(#warmLight)"/>
+
+  <!-- Clouds -->
+  <ellipse cx="100" cy="80" rx="70" ry="18" fill="#fff" opacity="0.35"/>
+  <ellipse cx="130" cy="76" rx="50" ry="14" fill="#fff" opacity="0.3"/>
+  <ellipse cx="380" cy="110" rx="60" ry="15" fill="#fff" opacity="0.25"/>
+  <ellipse cx="280" cy="55" rx="45" ry="10" fill="#fff" opacity="0.2"/>
+
+  <!-- === ISTANBUL SILHOUETTE (distant) === -->
+  <!-- Mosque silhouette -->
+  <g opacity="0.35" fill="#5a6a7a">
+    <!-- Mosque dome -->
+    <path d="M200 310 Q220 270 240 310"/>
+    <path d="M190 310 Q220 260 250 310"/>
+    <!-- Minaret -->
+    <rect x="255" y="275" width="5" height="35" fill="#5a6a7a"/>
+    <circle cx="257" cy="273" r="3" fill="#5a6a7a"/>
+    <rect x="180" y="275" width="5" height="35" fill="#5a6a7a"/>
+    <circle cx="182" cy="273" r="3" fill="#5a6a7a"/>
+  </g>
+
+  <!-- === CITY SKYLINE (closer) === -->
+  <g opacity="0.5">
+    <!-- Buildings far -->
+    <rect x="30" y="300" width="25" height="80" fill="url(#bldg2)" rx="1"/>
+    <rect x="60" y="310" width="20" height="70" fill="url(#bldg1)" rx="1"/>
+    <rect x="85" y="295" width="30" height="85" fill="url(#bldg2)" rx="1"/>
+    <rect x="120" y="320" width="18" height="60" fill="url(#bldg1)" rx="1"/>
+    <rect x="145" y="305" width="25" height="75" fill="url(#bldg2)" rx="1"/>
+
+    <rect x="300" y="310" width="22" height="70" fill="url(#bldg1)" rx="1"/>
+    <rect x="328" y="295" width="28" height="85" fill="url(#bldg2)" rx="1"/>
+    <rect x="362" y="315" width="20" height="65" fill="url(#bldg1)" rx="1"/>
+    <rect x="388" y="300" width="30" height="80" fill="url(#bldg2)" rx="1"/>
+    <rect x="425" y="310" width="22" height="70" fill="url(#bldg1)" rx="1"/>
+    <rect x="452" y="320" width="25" height="60" fill="url(#bldg2)" rx="1"/>
+    <rect x="482" y="305" width="28" height="75" fill="url(#bldg1)" rx="1"/>
+  </g>
+
+  <!-- Window lights on buildings -->
+  <g fill="#ffe88a" opacity="0.3">
+    <rect x="35" y="310" width="3" height="3" rx="0.5"/>
+    <rect x="42" y="310" width="3" height="3" rx="0.5"/>
+    <rect x="35" y="320" width="3" height="3" rx="0.5"/>
+    <rect x="42" y="320" width="3" height="3" rx="0.5"/>
+    <rect x="90" y="305" width="3" height="3" rx="0.5"/>
+    <rect x="97" y="305" width="3" height="3" rx="0.5"/>
+    <rect x="90" y="315" width="3" height="3" rx="0.5"/>
+    <rect x="97" y="315" width="3" height="3" rx="0.5"/>
+    <rect x="333" y="305" width="3" height="3" rx="0.5"/>
+    <rect x="340" y="305" width="3" height="3" rx="0.5"/>
+    <rect x="333" y="315" width="3" height="3" rx="0.5"/>
+    <rect x="393" y="310" width="3" height="3" rx="0.5"/>
+    <rect x="400" y="310" width="3" height="3" rx="0.5"/>
+    <rect x="393" y="320" width="3" height="3" rx="0.5"/>
+    <rect x="400" y="320" width="3" height="3" rx="0.5"/>
+    <rect x="487" y="315" width="3" height="3" rx="0.5"/>
+    <rect x="494" y="315" width="3" height="3" rx="0.5"/>
+  </g>
+
+  <!-- === SEA / WATER === -->
+  <rect x="0" y="380" width="540" height="120" fill="url(#sea)"/>
+  <!-- Water shimmer -->
+  <g stroke="#fff" stroke-width="0.8" opacity="0.15">
+    <line x1="50" y1="400" x2="110" y2="400"/>
+    <line x1="180" y1="420" x2="260" y2="420"/>
+    <line x1="320" y1="410" x2="400" y2="410"/>
+    <line x1="100" y1="440" x2="170" y2="440"/>
+    <line x1="350" y1="450" x2="430" y2="450"/>
+    <line x1="200" y1="460" x2="290" y2="460"/>
+    <line x1="420" y1="430" x2="500" y2="430"/>
+    <line x1="60" y1="470" x2="140" y2="470"/>
+  </g>
+
+  <!-- Small boat on water -->
+  <g transform="translate(350, 430)" opacity="0.4">
+    <path d="M-12 0 Q0 6 12 0 Q0 -2 -12 0Z" fill="#8b6040"/>
+    <line x1="0" y1="0" x2="0" y2="-14" stroke="#666" stroke-width="0.8"/>
+    <polygon points="0,-14 8,-8 0,-4" fill="#fff" opacity="0.7"/>
+  </g>
+
+  <!-- === COASTAL GREENERY === -->
+  <path d="M0 495 Q80 480 160 495 Q240 505 320 490 Q400 480 480 495 Q510 500 540 495 L540 550 L0 550Z" fill="#4a8a3a" opacity="0.6"/>
+
+  <!-- Trees near coast -->
+  <g opacity="0.5">
+    <rect x="70" y="478" width="4" height="12" fill="#5a3a20"/>
+    <ellipse cx="72" cy="474" rx="10" ry="8" fill="#3a7a2a"/>
+    <rect x="430" y="480" width="4" height="12" fill="#5a3a20"/>
+    <ellipse cx="432" cy="476" rx="10" ry="8" fill="#3a7a2a"/>
+    <rect x="250" y="482" width="3" height="10" fill="#5a3a20"/>
+    <ellipse cx="251" cy="478" rx="8" ry="7" fill="#3a7a2a"/>
+  </g>
+
+  <!-- === BALCONY === -->
+  <!-- Balcony floor -->
+  <rect x="0" y="550" width="540" height="170" fill="#c8b8a0" rx="0"/>
+  <rect x="0" y="550" width="540" height="8" fill="#b0a088"/>
+
+  <!-- Balcony tiles pattern -->
+  <g stroke="#b5a590" stroke-width="0.3" opacity="0.3">
+    <line x1="0" y1="580" x2="540" y2="580"/>
+    <line x1="0" y1="610" x2="540" y2="610"/>
+    <line x1="0" y1="640" x2="540" y2="640"/>
+    <line x1="0" y1="670" x2="540" y2="670"/>
+    <line x1="0" y1="700" x2="540" y2="700"/>
+    <line x1="60" y1="550" x2="60" y2="720"/>
+    <line x1="120" y1="550" x2="120" y2="720"/>
+    <line x1="180" y1="550" x2="180" y2="720"/>
+    <line x1="240" y1="550" x2="240" y2="720"/>
+    <line x1="300" y1="550" x2="300" y2="720"/>
+    <line x1="360" y1="550" x2="360" y2="720"/>
+    <line x1="420" y1="550" x2="420" y2="720"/>
+    <line x1="480" y1="550" x2="480" y2="720"/>
+  </g>
+
+  <!-- Flower pot on balcony -->
+  <g transform="translate(100, 610)">
+    <path d="M-15 0 L-12 35 L12 35 L15 0 Z" fill="#b85c3a"/>
+    <path d="M-17 0 L17 0 L15 -5 L-15 -5 Z" fill="#a04c2a"/>
+    <ellipse cx="0" cy="-8" rx="15" ry="10" fill="#3a8a2a"/>
+    <ellipse cx="-5" cy="-12" rx="10" ry="7" fill="#4a9a3a"/>
+    <circle cx="3" cy="-14" r="4" fill="#e86060"/>
+    <circle cx="-6" cy="-10" r="3" fill="#f5e642"/>
+    <circle cx="8" cy="-8" r="3" fill="#e86060"/>
+  </g>
+
+  <!-- Another flower pot -->
+  <g transform="translate(430, 615)">
+    <path d="M-12 0 L-10 30 L10 30 L12 0 Z" fill="#b85c3a"/>
+    <path d="M-14 0 L14 0 L12 -4 L-12 -4 Z" fill="#a04c2a"/>
+    <ellipse cx="0" cy="-6" rx="12" ry="8" fill="#3a8a2a"/>
+    <ellipse cx="-3" cy="-10" rx="8" ry="6" fill="#4a9a3a"/>
+    <circle cx="2" cy="-12" r="3.5" fill="#f5a0d0"/>
+    <circle cx="-4" cy="-8" r="3" fill="#f5a0d0"/>
+  </g>
+
+  <!-- === BALCONY RAILING === -->
+  <!-- Top rail -->
+  <rect x="0" y="540" width="540" height="5" fill="url(#railGrad)" rx="1"/>
+  <!-- Bottom rail -->
+  <rect x="0" y="555" width="540" height="3" fill="url(#railGrad)" rx="1"/>
+  <!-- Vertical bars -->
+  <g fill="url(#railGrad)">
+    <rect x="30" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="60" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="90" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="120" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="150" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="180" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="210" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="240" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="270" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="300" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="330" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="360" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="390" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="420" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="450" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="480" y="540" width="3" height="18" rx="0.5"/>
+    <rect x="510" y="540" width="3" height="18" rx="0.5"/>
+  </g>
+
+  <!-- === PVC DOOR FRAME (Sliding door with sineklik) === -->
+  <!-- Outer PVC frame -->
+  <rect x="10" y="8" width="520" height="535" rx="2" fill="url(#pvcFrame)" filter="url(#shadow2)"/>
+
+  <!-- Frame borders -->
+  <rect x="10" y="8" width="520" height="12" rx="2" fill="url(#pvcFrame)"/>
+  <rect x="10" y="531" width="520" height="12" rx="2" fill="url(#pvcFrame)"/>
+  <rect x="10" y="8" width="12" height="535" rx="2" fill="url(#pvcFrame)"/>
+  <rect x="518" y="8" width="12" height="535" rx="2" fill="url(#pvcFrame)"/>
+
+  <!-- Middle vertical divider -->
+  <rect x="260" y="8" width="14" height="535" fill="url(#pvcFrame)"/>
+
+  <!-- Frame lines -->
+  <line x1="22" y1="8" x2="22" y2="543" stroke="#d0d0d0" stroke-width="0.4"/>
+  <line x1="518" y1="8" x2="518" y2="543" stroke="#d0d0d0" stroke-width="0.4"/>
+  <line x1="10" y1="20" x2="530" y2="20" stroke="#d0d0d0" stroke-width="0.4"/>
+  <line x1="10" y1="531" x2="530" y2="531" stroke="#d0d0d0" stroke-width="0.4"/>
+  <line x1="260" y1="8" x2="260" y2="543" stroke="#d0d0d0" stroke-width="0.4"/>
+  <line x1="274" y1="8" x2="274" y2="543" stroke="#d0d0d0" stroke-width="0.4"/>
+
+  <!-- Door handle (left panel) -->
+  <rect x="248" y="260" width="6" height="30" rx="2" fill="#bbb"/>
+  <!-- Door handle (right panel) -->
+  <rect x="280" y="260" width="6" height="30" rx="2" fill="#bbb"/>
+
+  <!-- === SINEKLIK MESH on left panel === -->
+  <rect x="22" y="20" width="238" height="511" fill="url(#meshPattern)" opacity="0.6"/>
+
+  <!-- Glass reflection on right panel -->
+  <rect x="274" y="20" width="244" height="511" fill="url(#glassRef2)"/>
+  <path d="M274 20 L380 20 L274 200Z" fill="#fff" opacity="0.04"/>
+
+  <!-- Label -->
+  <text x="270" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#aaa" letter-spacing="1.2">EGEPEN DECEUNINCK</text>
+
+  <!-- Birds -->
+  <g stroke="#4a6a8a" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M160 90 Q165 83 170 90 Q175 83 180 90"/>
+    <path d="M350 70 Q354 64 358 70 Q362 64 366 70"/>
+    <path d="M420 100 Q423 95 426 100 Q429 95 432 100"/>
+  </g>
+
+</svg>
