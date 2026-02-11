@@ -299,7 +299,7 @@
             </div>
             <aside class="mh-col-2-3 mh-header-widget-2">
               <div id="block-53" class="mh-widget mh-header-2 widget_block"><a target="_self" href="../index.html"><img
-                    loading="eager" decoding="async" src="../wp-content/uploads/2023/03/2-banner.gif"
+                    loading="lazy" decoding="async" src="../wp-content/uploads/2023/03/2-banner.gif"
                     alt="Egepen Akcayapi Banner" width="728" height="90" /></a></div>
             </aside>
           </div>
@@ -501,6 +501,52 @@
 
               <style>
                 /* === EAK Sineklik Page Professional CSS v2 === */
+
+                /* === CLS Prevention & Performance === */
+                .eak-sineklik-hero-img img {
+                  aspect-ratio: 800 / 738;
+                  contain: layout style;
+                }
+                .eak-neden-img img {
+                  aspect-ratio: 540 / 720;
+                }
+                .eak-type-card-img img {
+                  aspect-ratio: 1 / 1;
+                  object-fit: cover;
+                }
+                .eak-dcf-img img {
+                  aspect-ratio: auto;
+                  object-fit: cover;
+                }
+                /* Prevent CLS from FAQ accordion: use grid trick instead of max-height */
+                .eak-faq-answer {
+                  display: grid;
+                  grid-template-rows: 0fr;
+                  overflow: hidden;
+                  transition: grid-template-rows .4s ease, padding .3s ease;
+                  max-height: none !important;
+                }
+                .eak-faq-answer > * {
+                  overflow: hidden;
+                  min-height: 0;
+                }
+                .eak-faq-item.active .eak-faq-answer {
+                  grid-template-rows: 1fr;
+                  max-height: none !important;
+                }
+                /* Contain below-fold sections for paint optimization */
+                .eak-detail-section,
+                .eak-faq-section,
+                .eak-gallery-section,
+                .eak-video-grid,
+                .eak-contact-section {
+                  content-visibility: auto;
+                  contain-intrinsic-size: auto 500px;
+                }
+                /* YouTube facade responsive */
+                .yt-facade { transition: opacity .2s; }
+                .yt-facade:hover img { opacity: 1 !important; }
+
 
                 /* Breadcrumb */
                 .eak-breadcrumb {
@@ -1443,7 +1489,7 @@
 
                 .eak-faq-answer p {
                   font-size: 14px;
-                  color: #555;
+                  color: #4a4a4a;
                   line-height: 1.7;
                   margin: 0
                 }
@@ -1932,7 +1978,7 @@
 
                 .eak-pet-adv-list li {
                   font-size: 13px;
-                  color: #555;
+                  color: #4a4a4a;
                   display: flex;
                   align-items: center;
                   gap: 5px
@@ -2546,14 +2592,8 @@
               <h2 class="eak-section-title"><i class="fa fa-play-circle" style="margin-right:8px;"></i> Videolar</h2>
               <p class="eak-section-subtitle">Sineklik montaj ve uygulama videolarımız</p>
               <div class="eak-video-grid">
-                <iframe loading="lazy" title="Sineklik Montaj Video 1" width="560" height="315"
-                  src="https://www.youtube-nocookie.com/embed/BRY2dzyRZh4?rel=0" style="border:0;"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe loading="lazy" title="Sineklik Montaj Video 2" width="560" height="315"
-                  src="https://www.youtube-nocookie.com/embed/lVTB93Hr7Lw?rel=0" style="border:0;"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="yt-facade" style="position:relative;width:100%;max-width:560px;aspect-ratio:560/315;background:#000;cursor:pointer;border-radius:8px;overflow:hidden;display:inline-block" onclick="this.outerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/BRY2dzyRZh4?rel=0&amp;autoplay=1\' width=\'560\' height=\'315\' style=\'border:0\' allowfullscreen allow=\'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture\' loading=\'eager\'></iframe>'" role="button" tabindex="0" aria-label="Sineklik Montaj Video 1 - Videoyu oynatmak için tıklayın"><img loading="lazy" src="https://i.ytimg.com/vi/BRY2dzyRZh4/hqdefault.jpg" alt="Sineklik Montaj Video 1" style="width:100%;height:100%;object-fit:cover;opacity:.75"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:rgba(255,0,0,.85);border-radius:14px;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+                <div class="yt-facade" style="position:relative;width:100%;max-width:560px;aspect-ratio:560/315;background:#000;cursor:pointer;border-radius:8px;overflow:hidden;display:inline-block" onclick="this.outerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/lVTB93Hr7Lw?rel=0&amp;autoplay=1\' width=\'560\' height=\'315\' style=\'border:0\' allowfullscreen allow=\'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture\' loading=\'eager\'></iframe>'" role="button" tabindex="0" aria-label="Sineklik Montaj Video 2 - Videoyu oynatmak için tıklayın"><img loading="lazy" src="https://i.ytimg.com/vi/lVTB93Hr7Lw/hqdefault.jpg" alt="Sineklik Montaj Video 2" style="width:100%;height:100%;object-fit:cover;opacity:.75"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:rgba(255,0,0,.85);border-radius:14px;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
               </div>
 
               <!-- Bottom CTA Section -->
@@ -2748,7 +2788,8 @@
       </div>
     </div>
   </div>
-  <link rel="stylesheet" type="text/css" href="../wp-content/cache/wpfc-minified/6zsmmfgi/9rf2c.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="../wp-content/cache/wpfc-minified/6zsmmfgi/9rf2c.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="../wp-content/cache/wpfc-minified/6zsmmfgi/9rf2c.css" media="all" /></noscript>
   <style id='joinchat-inline-css' type='text/css'>
     .joinchat {
       --ch: 142;
