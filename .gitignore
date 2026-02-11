@@ -1,0 +1,13 @@
+# HTTrack artifacts
+hts-cache/
+hts-log.txt
+pagead2.googlesyndication.com/
+www.egepen.com.tr/
+egepenakcayapi.com/
+
+# Node
+node_modules/
+
+# OS
+Thumbs.db
+.DS_Store
